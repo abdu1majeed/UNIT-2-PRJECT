@@ -1,7 +1,336 @@
-{% extends 'SaudiaArabia/base.html' %}
+{% extends "SaudiaArabia/base.html" %}
 {% load static %}
+{% block title %}التاريخ{% endblock %}
 
-{% block title %}
-history
+{% block content %}
+<section class="container py-5">
+  <header class="mb-4">
+    <h1 class="fw-bold">التاريخ السعودي</h1>
+    <p class="text-muted">
+      يمتد التاريخ السعودي عبر ثلاث دول: الأولى (1744م)، الثانية (1824م)، والثالثة (1902م) التي توّجت بإعلان المملكة
+      العربية السعودية عام 1932م على يد الملك المؤسس عبدالعزيز بن عبدالرحمن آل سعود، ثم مراحل بناء الدولة الحديثة حتى اليوم.
+    </p>
+  </header>
+
+  <!-- ============ الدولة السعودية الأولى ============ -->
+  <section id="first-state" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">1744–1818م | الدولة السعودية الأولى</h2>
+    <p class="text-muted mb-4">
+      انطلقت من الدرعية وأسست كيانًا سياسيًا موحّدًا في أجزاء واسعة من الجزيرة العربية، مع بروز الاستقرار والأمن والازدهار التجاري.
+    </p>
+
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/tr.webp' %}" alt="الدرعية - الدولة السعودية الأولى">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">حي الطريف التاريخي</h6>
+            <p class="card-text text-muted small">موقع تراث عالمي يعكس بدايات الدولة السعودية الأولى.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/njd1.webp' %}" alt="عمارة الطين التقليدية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">عمارة الطين النجدية</h6>
+            <p class="card-text text-muted small">طراز معماري أصيل في الدرعية ومناطق نجد.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/Road.jpg' %}" alt="طرق القوافل والتجارة">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">طرق القوافل</h6>
+            <p class="card-text text-muted small">ازدهار تجاري وحركة قوافل نشطة بين المدن.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">التأسيس في الدرعية</h5>
+            <p class="card-text text-muted">
+              قراءة في الظروف السياسية التي مهدت لقيام الدولة السعودية الأولى ودورها في توحيد مناطق الجزيرة العربية.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">العمران النجدي</h5>
+            <p class="card-text text-muted">
+              كيف شكّلت العمارة الطينية في نجد هوية عمرانية مميزة، وما علاقتها ببيئة المنطقة وثقافتها.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">التجارة والقوافل</h5>
+            <p class="card-text text-muted">
+              دور المسارات التجارية في تقوية الروابط الاقتصادية والاجتماعية بين المدن والحواضر.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+  <!-- ============ الدولة السعودية الثانية ============ -->
+  <section id="second-state" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">1824–1891م | الدولة السعودية الثانية</h2>
+    <p class="text-muted mb-4">
+      استمرار الحكم من الرياض وترسيخ الأمن والعلاقات القبلية وتطوير الأنشطة الاقتصادية في حقبة مهمة من التاريخ.
+    </p>
+
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/riy19.jpg' %}" alt="الرياض في القرن التاسع عشر">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الرياض قديمًا</h6>
+            <p class="card-text text-muted small">مركز الإدارة والحكم ونقطة تحول في تاريخ نجد.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/market.jpg' %}" alt="الأسواق التقليدية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الأسواق التقليدية</h6>
+            <p class="card-text text-muted small">حركة بيع وشراء نشطة للمنتجات المحلية والمستوردة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/fort.jpg' %}" alt="الحصون والقلاع">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الحصون والقلاع</h6>
+            <p class="card-text text-muted small">منظومة دفاعية لحماية المدن والطرق الإستراتيجية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">الرياض مركزًا للحكم</h5>
+            <p class="card-text text-muted">
+              قراءة تاريخية في مكانة الرياض ودورها السياسي والاجتماعي خلال الدولة السعودية الثانية.
+            </p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">العلاقات القبلية</h5>
+            <p class="card-text text-muted">
+              دور الأعراف والاتفاقات في حفظ الأمن وتيسير حركة التجارة في مناطق واسعة.
+            </p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">الاقتصاد المحلي</h5>
+            <p class="card-text text-muted">
+              الزراعة وتربية الماشية والأسواق الأسبوعية كمحركات رئيسية لاقتصاد المنطقة.
+            </p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ توحيد البلاد وإعلان المملكة ============ -->
+  <section id="unification" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">1902–1932م | توحيد البلاد وإعلان المملكة</h2>
+    <p class="text-muted mb-4">
+      استعادة الرياض عام 1902م ثم مسيرة التوحيد التي تكللت بإعلان المملكة العربية السعودية عام 1932م.
+    </p>
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/riyadh-1902.jpg' %}" alt="استعادة الرياض 1902">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">استعادة الرياض</h6>
+            <p class="card-text text-muted small">بداية مرحلة جديدة نحو توحيد البلاد.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/map-unification.jpg' %}" alt="خريطة التوحيد">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">خريطة التوحيد</h6>
+            <p class="card-text text-muted small">امتداد الدولة ووحدة المناطق تحت راية واحدة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/proclamation-1932.jpg' %}" alt="إعلان المملكة 1932">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">إعلان المملكة 1932</h6>
+            <p class="card-text text-muted small">تتويج مسيرة التوحيد بإعلان الدولة الحديثة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">من الرياض إلى المملكة</h5>
+            <p class="card-text text-muted">
+              أبرز المحطات في رحلة التوحيد بين 1902 و1932 ومؤسسات الدولة الناشئة.
+            </p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">الرموز الوطنية</h5>
+            <p class="card-text text-muted">
+              تطور الراية والنشيد والرموز الرسمية وأثرها في بناء الهوية الوطنية.
+            </p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">تأسيس المؤسسات</h5>
+            <p class="card-text text-muted">
+              اللبنات الأولى للوزارات والأجهزة الحكومية والأطر الإدارية الحديثة.
+            </p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ بناء الدولة الحديثة ============ -->
+  <section id="modern-state" class="mb-3">
+    <h2 class="h4 fw-bold mb-2">1932م–اليوم | بناء الدولة الحديثة</h2>
+    <p class="text-muted mb-4">
+      شهدت المملكة نهضة شاملة في البنية التحتية والتعليم والصحة والاقتصاد والطاقة، وصولًا إلى برامج التحول الوطني ورؤية 2030.
+    </p>
+
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/modern-infra.jpg' %}" alt="البنية التحتية الحديثة">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">البنية التحتية</h6>
+            <p class="card-text text-muted small">طرق وموانئ ومطارات ومدن حديثة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/education.jpg' %}" alt="التعليم والجامعات">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">التعليم والجامعات</h6>
+            <p class="card-text text-muted small">توسع نوعي وكمي في المنظومة التعليمية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="{% static 'images/history/vision2030.jpg' %}" alt="رؤية 2030">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">رؤية 2030</h6>
+            <p class="card-text text-muted small">تحول اقتصادي ومجتمعي لبناء مستقبل مزدهر.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">التحول الوطني</h5>
+            <p class="card-text text-muted">
+              برامج ومبادرات هدفت إلى رفع كفاءة الخدمات الحكومية وتمكين القطاع الخاص.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">تنويع الاقتصاد</h5>
+            <p class="card-text text-muted">
+              قطاعات السياحة والصناعة والتقنية والطاقة المتجددة كمحركات جديدة للنمو.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">المجتمع الحيوي</h5>
+            <p class="card-text text-muted">
+              جودة الحياة، الثقافة، الرياضة، وتمكين المتطوعين والقطاع غير الربحي.
+            </p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المقال</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
 {% endblock %}
-

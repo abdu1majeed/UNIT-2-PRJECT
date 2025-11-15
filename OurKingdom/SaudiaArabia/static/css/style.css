@@ -6,3 +6,124 @@ body {
   font-family: "Cairo", sans-serif;
 }
 
+/* ====== Footer Modern Light ====== */
+.footer-modern {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.footer-modern h6 {
+  font-size: 1rem;
+}
+
+.footer-links a {
+  color: #198754; /* أخضر سعودي */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, padding-right 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #145c32; /* أخضر غامق عند المرور */
+  padding-right: 4px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #198754;
+  color: #198754;
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  background-color: #198754;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  background-color: #e9ecef;
+}
+
+/* ====== Saudi Accent Line ====== */
+.footer-modern::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #006c35, #009e60, #00c37a);
+  border-radius: 2px 2px 0 0;
+}
+
+/* تحسين الخلفية قليلاً */
+.footer-modern {
+  background-color: #fdfdfd;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* هوفر للأيقونات - أخضر متدرج أنيق */
+.social-icon:hover {
+  background: linear-gradient(135deg, #00a859, #007b41);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,168,89,.25);
+}
+
+/* الروابط hover بخط سفلي أنيق */
+.footer-links a:hover {
+  color: #007b41;
+  text-decoration: underline;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: #0b0e12;
+  color: #e9ecef;
+}
+
+[data-bs-theme="dark"] .footer-modern {
+  background-color: #0f1115;
+  color: #e9ecef;
+}
+[data-bs-theme="dark"] .footer-bottom {
+  background-color: rgba(255,255,255,.06);
+}
+[data-bs-theme="dark"] .footer-links a { color: #8bd3a5; }
+[data-bs-theme="dark"] .footer-links a:hover { color: #b6f0c9; text-decoration: underline; }
+
+[data-bs-theme="dark"] .card {
+  background-color: #12151b;
+  border-color: #1e222a;
+}
+
+
+/* ====== Hero colors (تتبع متغيرات Bootstrap لكل ثيم) ====== */
+.hero-title{
+  color: var(--bs-emphasis-color) !important; /* عنوان واضح */
+  opacity: 1 !important;
+}
+.hero-sub{
+  color: var(--bs-secondary-color) !important; /* فقرة بلون ثانوي واضح */
+  opacity: 1 !important;
+}
+
+/* لو كان فيه قواعد سابقة تقلل شفافية العناوين في كل الموقع، نلغيها هنا */
+h1, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6{
+  opacity: 1 !important;
+}
+
+/* تأكد من تباين الخلفية حسب الثيم */
+[data-bs-theme="light"] body{ background-color:#f8f9fa; }
+[data-bs-theme="dark"]  body{ background-color:#0b0e12; }
+
+
+.card-img-top {
+    width: 100%; /* تأكد من أن الصورة تأخذ العرض الكامل للبطاقة */
+    height: 250px; /* أو أي ارتفاع آخر تفضله */
+    object-fit: cover; /* يحافظ على نسبة الأبعاد للصورة */
+  }

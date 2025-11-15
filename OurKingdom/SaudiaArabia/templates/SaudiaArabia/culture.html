@@ -1,7 +1,296 @@
-{% extends 'SaudiaArabia/base.html' %}
+{% extends "SaudiaArabia/base.html" %}
 {% load static %}
+{% block title %}الثقافة{% endblock %}
 
-{% block title %}
-culture
+{% block content %}
+<section class="container py-5">
+  <header class="mb-4">
+    <h1 class="fw-bold">الثقافة السعودية</h1>
+    <p class="text-muted">
+      مزيج غني من التراث والفنون واللباس والمطبخ والموسيقى والحرف والعمارة والمواسم الثقافية، في تناغم بين الأصالة والتجديد.
+    </p>
+  </header>
+
+  <!-- ============ التراث والفنون الشعبية ============ -->
+  <section id="heritage" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">التراث والفنون الشعبية</h2>
+    <p class="text-muted mb-4">ألوان فنية تعبّر عن الأصالة مثل العرضة والسامري والخبيتي والدحة، مع أزياء وموسيقى وآلات تراثية.</p>
+
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/ardha.jpg' %}" class="card-img-top" alt="العرضة السعودية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">العرضة السعودية</h6>
+            <p class="card-text text-muted small">رقصة وطنية بطابع احتفالي وإيقاعات الطبول والسيوف.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/folklore.jpg' %}" class="card-img-top" alt="فنون شعبية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">فنون المناطق</h6>
+            <p class="card-text text-muted small">تنوع إيقاعات الرقص والغناء من الشمال إلى الجنوب.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/instruments.jpg' %}" class="card-img-top" alt="آلات موسيقية تقليدية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الآلات التقليدية</h6>
+            <p class="card-text text-muted small">الطبل والمزهر والربابة رفقاء الفنون الشعبية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">العرضة كرمز وطني</h5>
+            <p class="card-text text-muted">كيف تحضر العرضة السعودية في المناسبات الوطنية والاحتفالات الرسمية.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">تنوع الفلكلور</h5>
+            <p class="card-text text-muted">لمحة عن أبرز الفنون الشعبية في عسير وجازان ونجد وتبوك والمنطقة الشرقية.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">الآلات والإيقاع</h5>
+            <p class="card-text text-muted">دور الإيقاعات والآلات التقليدية في تشكيل الهوية الصوتية للفنون الشعبية.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ اللباس والمطبخ ============ -->
+  <section id="attire-food" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">اللباس والمطبخ</h2>
+    <p class="text-muted mb-4">هوية متجددة في الأزياء مع مطبخ متنوع يعكس جغرافيا البلاد وتاريخها.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/attire.jpg' %}" class="card-img-top" alt="اللباس التقليدي">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">اللباس التقليدي</h6>
+            <p class="card-text text-muted small">الثوب والعباءة والشيلة والأزياء الجنوبية المطرزة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/coffee.jpg' %}" class="card-img-top" alt="القهوة السعودية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">القهوة السعودية</h6>
+            <p class="card-text text-muted small">قهوة الهيل والزعفران… طقوس الضيافة والكرم.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/dishes.jpg' %}" class="card-img-top" alt="أطباق محلية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">أطباق محلية</h6>
+            <p class="card-text text-muted small">كبسة، جريش، مرقوق، سليق… تنوع أقاليمي غني.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">تطور الأزياء</h5>
+            <p class="card-text text-muted">من الزي التقليدي إلى التصاميم الحديثة مع الحفاظ على العناصر التراثية.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">ثقافة الضيافة</h5>
+            <p class="card-text text-muted">القهوة والتمور كرموز للضيافة وقيم المجتمع السعودي.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">المطبخ الإقليمي</h5>
+            <p class="card-text text-muted">اختلاف الأطباق بين الحجاز ونجد والجنوب والشرق والشمال.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ الموسيقى والفنون المعاصرة ============ -->
+  <section id="music-art" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">الموسيقى والفنون المعاصرة</h2>
+    <p class="text-muted mb-4">نهضة موسيقية وبصرية مع مسارح ومعارض ومتاحف ومبادرات ثقافية معاصرة.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/music-hall.jpg' %}" class="card-img-top" alt="مسارح وحفلات">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">المسارح والحفلات</h6>
+            <p class="card-text text-muted small">مشهد موسيقي متصاعد وعروض حيّة متنوعة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/museum.jpg' %}" class="card-img-top" alt="متاحف ومعارض">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">متاحف ومعارض</h6>
+            <p class="card-text text-muted small">فن معاصر وتركيبات بصرية ومتاحف متخصصة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/film.jpg' %}" class="card-img-top" alt="السينما والفيلم">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">السينما والفيلم</h6>
+            <p class="card-text text-muted small">إنتاج سينمائي متنامٍ ومهرجانات أفلام.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">المشهد الموسيقي</h5>
+            <p class="card-text text-muted">أبرز المهرجانات الموسيقية وتأثيرها على المشهد الفني المحلي.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">الفن البصري</h5>
+            <p class="card-text text-muted">جيل جديد من الفنانين ومعارض تحتفي بالأفكار المعاصرة.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">صناعة الفيلم</h5>
+            <p class="card-text text-muted">كيف تتطور البنية التحتية لصناعة السينما من مهرجانات إلى منصات إنتاج.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ الحرف اليدوية والأسواق ============ -->
+  <section id="crafts" class="mb-3">
+    <h2 class="h4 fw-bold mb-2">الحرف اليدوية والأسواق</h2>
+    <p class="text-muted mb-4">حرف تقليدية أصيلة كالخوص والخشب والنسيج والفضة، وأسواق تاريخية نابضة.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/handicraft.jpg' %}" class="card-img-top" alt="الحرف اليدوية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">حِرَف تقليدية</h6>
+            <p class="card-text text-muted small">خوص وحياكة وسدو ونقوش فضية مميزة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/souq.jpg' %}" class="card-img-top" alt="أسواق تراثية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">أسواق تراثية</h6>
+            <p class="card-text text-muted small">سوق عكاظ، القيصرية، وأسواق جدة التاريخية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/culture/textile.jpg' %}" class="card-img-top" alt="نسيج وزخارف">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">نسيج وزخارف</h6>
+            <p class="card-text text-muted small">أنماط لونية وزخرفية تعبّر عن هوية المكان.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">إحياء الحرف</h5>
+            <p class="card-text text-muted">برامج لدعم الحرفيين وتسويق المنتجات التراثية محليًا وعالميًا.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">أسواق التاريخ</h5>
+            <p class="card-text text-muted">دور الأسواق القديمة في التواصل الثقافي والاقتصادي بين المناطق.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">الزخرفة والنسيج</h5>
+            <p class="card-text text-muted">معاني الرموز والألوان في السدو والمنتجات المنسوجة.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
 {% endblock %}
-

@@ -1,7 +1,367 @@
-{% extends 'SaudiaArabia/base.html' %}
+{% extends "SaudiaArabia/base.html" %}
 {% load static %}
+{% block title %}السياحة{% endblock %}
 
-{% block title %}
-tourism
+{% block content %}
+<section class="container py-5">
+
+  <header class="mb-4">
+    <h1 class="fw-bold">السياحة في السعودية</h1>
+    <p class="text-muted">
+      تنوّع جغرافي وثقافي فريد: سواحل وجزر على البحر الأحمر، جبال وسهول، صحارى ملهمة، مدن عصرية، ومواقع تراث عالمي.
+    </p>
+  </header>
+
+  <!-- ============ الطبيعة والمناظر ============ -->
+  <section id="nature" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">الطبيعة والمناظر الخلابة</h2>
+    <p class="text-muted mb-4">من جبال السودة وأودية الجنوب إلى صحارى الربع الخالي وكثبان الدهناء.</p>
+
+    <!-- صور -->
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/asir-mountains.jpg' %}" class="card-img-top" alt="جبال عسير">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">جبال عسير</h6>
+            <p class="card-text text-muted small">إطلالات ضبابية ومناخ لطيف في السودة والقرى الجبلية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/desert-dunes.jpg' %}" class="card-img-top" alt="كثبان الرمال">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الكثبان والصحارى</h6>
+            <p class="card-text text-muted small">تخييم، مشاهدة النجوم، ورحلات سيارات الدفع الرباعي.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/oases.jpg' %}" class="card-img-top" alt="الواحات">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الواحات</h6>
+            <p class="card-text text-muted small">بساتين نخيل وعيون مياه تمنح الرحلة هدوءًا وطابعًا أصيلًا.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- مقالات -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">دليل</span>
+            <h5 class="card-title">مسارات المشي في السودة</h5>
+            <p class="card-text text-muted">أفضل الإطلالات ونصائح السلامة ومواسم الزيارة المقترحة.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ الدليل</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">مقال</span>
+            <h5 class="card-title">سحر الصحراء ليلاً</h5>
+            <p class="card-text text-muted">مشاهدة مسارات درب التبانة وتجارب التخييم بين الكثبان.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">نصائح</span>
+            <h5 class="card-title">معدات الرحلات البرية</h5>
+            <p class="card-text text-muted">قائمة مختصرة للمهمات الضرورية لتجربة آمنة وممتعة.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اطّلع عليها</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ السواحل والجزر والغطس ============ -->
+  <section id="coast" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">السواحل والجزر والغطس</h2>
+    <p class="text-muted mb-4">شعاب مرجانية بكر ومياه دافئة وأنشطة بحرية متنوعة على امتداد البحر الأحمر.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/redsea-diving.jpg' %}" class="card-img-top" alt="غوص البحر الأحمر">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الغوص والسنوركل</h6>
+            <p class="card-text text-muted small">مواقع غوص شهيرة وشعاب نابضة بالحياة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/islands.jpg' %}" class="card-img-top" alt="جزر البحر الأحمر">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الجزر والشواطئ</h6>
+            <p class="card-text text-muted small">رحلات قوارب وجزر بنقاء عالٍ ورمال ناعمة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/watersports.jpg' %}" class="card-img-top" alt="الرياضات البحرية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">رياضات بحرية</h6>
+            <p class="card-text text-muted small">تجديف، تزلج على الماء، وإبحار شراعي.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">خريطة</span>
+            <h5 class="card-title">أفضل مواقع الغوص</h5>
+            <p class="card-text text-muted">نِقَاط موصى بها للمبتدئين والمتمرسين على السواحل الغربية.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">استكشف المواقع</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">رحلة جزيرة يومٍ واحد</h5>
+            <p class="card-text text-muted">برنامج مقترح للسباحة والسنوركل والاسترخاء على الشاطئ.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ البرنامج</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">سلامة</span>
+            <h5 class="card-title">إرشادات البحر</h5>
+            <p class="card-text text-muted">السلامة والبيئة البحرية والمسؤولية في الرحلات الساحلية.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اطّلع عليها</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ التراث العالمي (اليونسكو) ============ -->
+  <section id="unesco" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">التراث العالمي</h2>
+    <p class="text-muted mb-4">مواقع مسجلة في قائمة اليونسكو مثل الدرعية والعلا وجدة التاريخية ومواقع الفنون الصخرية.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/diriyah.jpg' %}" class="card-img-top" alt="الدرعية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الدرعية</h6>
+            <p class="card-text text-muted small">حي الطريف وقصص التأسيس الأولى.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/alula.jpg' %}" class="card-img-top" alt="العلا">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">العُلا</h6>
+            <p class="card-text text-muted small">مدائن صالح وتشكيلات صخرية مذهلة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/jeddah-historic.jpg' %}" class="card-img-top" alt="جدة التاريخية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">جدة التاريخية</h6>
+            <p class="card-text text-muted small">بيوت رواشين وأسواق حجازية عتيقة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">مقال</span>
+            <h5 class="card-title">تجربة في العلا</h5>
+            <p class="card-text text-muted">مزيج من التاريخ والطبيعة والفنون المعاصرة في واحة واحدة.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">جولة</span>
+            <h5 class="card-title">مسار جدة التاريخية</h5>
+            <p class="card-text text-muted">بيت نصيف، الأزقة القديمة، والأسواق الشعبية في نصف يوم.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">شاهد المسار</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-dark-subtle text-dark mb-2">صور</span>
+            <h5 class="card-title">الفنون الصخرية</h5>
+            <p class="card-text text-muted">نقوش قديمة في حائل وتيماء تعكس حضارات الجزيرة.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">تعرّف أكثر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ المدن العصرية والتسوق ============ -->
+  <section id="cities" class="mb-5">
+    <h2 class="h4 fw-bold mb-2">المدن العصرية والتجارب الحضرية</h2>
+    <p class="text-muted mb-4">مطاعم ومتاحف وحدائق ومناطق ترفيه حديثة في الرياض وجدة والدمام والخبر.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/riyadh-skyline.jpg' %}" class="card-img-top" alt="الرياض">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الرياض</h6>
+            <p class="card-text text-muted small">متحف، بوليفارد، ومناطق فعاليات موسمية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/jeddah-corniche.jpg' %}" class="card-img-top" alt="كورنيش جدة">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">جدة</h6>
+            <p class="card-text text-muted small">كورنيش ممتد ومطاعم بحرية وأسواق حديثة.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/khobar.jpg' %}" class="card-img-top" alt="الخبر">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">الخبر والدمام</h6>
+            <p class="card-text text-muted small">واجهات بحرية ومتنزهات وأجواء عائلية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">قائمة</span>
+            <h5 class="card-title">أفضل المتاحف</h5>
+            <p class="card-text text-muted">قائمة مختصرة لمتاحف ينصح بزيارتها للعائلة وهواة التاريخ.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">شاهد القائمة</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">دليل</span>
+            <h5 class="card-title">24 ساعة في جدة</h5>
+            <p class="card-text text-muted">برنامج حضري سريع: كورنيش، منطقة تاريخية، ومطاعم.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">ابدأ الجولة</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success-subtle text-success mb-2">تجربة</span>
+            <h5 class="card-title">حدائق ومضامير</h5>
+            <p class="card-text text-muted">أماكن للركض وركوب الدراجات ومناطق لعب للأطفال.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">اكتشف الآن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- ============ المواسم والفعاليات ============ -->
+  <section id="seasons" class="mb-3">
+    <h2 class="h4 fw-bold mb-2">المواسم والفعاليات</h2>
+    <p class="text-muted mb-4">روزنامة متنوّعة على مدار العام: حفلات، معارض، رياضات، وأسواق موسمية.</p>
+    <div class="row g-4 mb-4">
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/festival.jpg' %}" class="card-img-top" alt="مهرجانات">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">مهرجانات وثقافة</h6>
+            <p class="card-text text-muted small">عروض، مسارح، ومعارض فنية عصرية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/sports.jpg' %}" class="card-img-top" alt="رياضات عالمية">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">رياضات عالمية</h6>
+            <p class="card-text text-muted small">سباقات وبطولات دولية وتجارب جماهيرية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4">
+        <div class="card h-100">
+          <img src="{% static 'images/tourism/winter.jpg' %}" class="card-img-top" alt="فعاليات الشتاء">
+          <div class="card-body">
+            <h6 class="card-title fw-bold">فعاليات الشتاء</h6>
+            <p class="card-text text-muted small">أسواق وأضواء وتجارب عائلية إبداعية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">رزنامة</span>
+            <h5 class="card-title">تقويم الفعاليات</h5>
+            <p class="card-text text-muted">كيف تخطط لرحلتك حسب الموسم والمدينة والاهتمامات.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">تصفح الرزنامة</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">مقال</span>
+            <h5 class="card-title">رحلة نهاية أسبوع</h5>
+            <p class="card-text text-muted">اقتراحات قصيرة لعطلة نهاية الأسبوع بين الترفيه والثقافة.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اقرأ المقترح</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary-subtle text-primary mb-2">عائلة</span>
+            <h5 class="card-title">أنشطة للأطفال</h5>
+            <p class="card-text text-muted">وجهات مناسبة للعائلات مع مناطق لعب وتجارب تفاعلية.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">اعرف أكثر</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
 {% endblock %}
-

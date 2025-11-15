@@ -1,96 +1,129 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
-    <head>
-        <title>{% block title %} {% endblock %}</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-    
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        
-        <!-- CSS Stylesheet -->
-        <link rel="stylesheet" href="static/css/style.css">
+<html lang="ar" dir="rtl" data-bs-theme="{{ theme|default:'light' }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}المملكة العربية السعودية{% endblock %}</title>
 
-        <!-- Google Fonts Symbols -->
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        
-    </head>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-    <body dir="rtl">
-        <header>
-            <!-- start navbar here -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container">
-                    <a class="navbar-brand" href="#">المملكة العربية السعودية
-                    <img src="static/images/ksa3.png" width="45" height="45" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">الرئيسية</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="history/">التاريخ</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="culture/">الثقافة</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="tourism/">السياحة</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="education/">التعليم</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="manufacturing/">التصنيع</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="vision/">الروئية</a>
-                        </li> 
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    </div>
-                </div>
-            </nav>
-            <!-- end navbar here -->
-        </header>
-        <main>
-            {% block content %}
-            
-            {% endblock %}
-        </main>
-        <footer>
-            <!-- start footer here -->
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
 
-            <!-- end footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+    <!-- Your CSS (placed after Bootstrap so it overrides it) -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+          المملكة العربية السعودية
+          <img src="{% static 'images/ksa3.png' %}" width="45" height="45" alt="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:home_page' %}">الرئيسية</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:history_page' %}">التاريخ</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:culture_page' %}">الثقافة</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:tourism_page' %}">السياحة</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:education_page' %}">التعليم</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:manufacturing_page' %}">التصنيع</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'SaudiaArabia:vision_page' %}">الرؤية</a></li>
+          </ul>
+
+          <div class="text-start">
+            <a class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-2"
+              href="{% url 'SaudiaArabia:toggle_theme' %}?next={{ request.get_full_path|urlencode }}">
+              {% if theme == 'dark' %}
+                <i class="bi bi-brightness-high"></i><span>الوضع النهاري</span>
+              {% else %}
+                <i class="bi bi-moon"></i><span>الوضع الليلي</span>
+              {% endif %}
+            </a>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <!-- /NAVBAR -->
+
+    <main class="flex-grow-1">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER-->
+    <footer class="footer-modern mt-auto border-top" dir="rtl">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start justify-content-between">
+
+          <!-- العمود الأول: الشعار + وصف -->
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+              <img src="{% static 'images/ksa3.png' %}" width="50" height="50" alt="logo">
+              <h5 class="fw-bold text-success mb-0">المملكة العربية السعودية</h5>
+            </div>
+            <p class="text-muted small mb-4">
+              منصة تعريفية بالمملكة العربية السعودية، تضم صفحات عن تاريخها وثقافتها وسياحتها وتعليمها وصناعتها ورؤيتها المستقبلية.
+            </p>
+            <div class="d-flex justify-content-center justify-content-md-start gap-3">
+              <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <!-- العمود الثاني: روابط عامة -->
+          <div class="col-6 col-md-3 text-center text-md-start">
+            <h6 class="fw-bold text-success border-bottom pb-2 mb-3">المحتوى العام</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="{% url 'SaudiaArabia:home_page' %}">الرئيسية</a></li>
+              <li><a href="{% url 'SaudiaArabia:history_page' %}">التاريخ</a></li>
+              <li><a href="{% url 'SaudiaArabia:culture_page' %}">الثقافة</a></li>
+              <li><a href="{% url 'SaudiaArabia:tourism_page' %}">السياحة</a></li>
+            </ul>
+          </div>
+
+          <!-- العمود الثالث: التعليم والرؤية -->
+          <div class="col-6 col-md-3 text-center text-md-start">
+            <h6 class="fw-bold text-success border-bottom pb-2 mb-3">التعليم والرؤية</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="{% url 'SaudiaArabia:education_page' %}">التعليم</a></li>
+              <li><a href="{% url 'SaudiaArabia:manufacturing_page' %}">التصنيع</a></li>
+              <li><a href="{% url 'SaudiaArabia:vision_page' %}">الرؤية</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center border-top py-3 small text-muted">
+        <span>© {% now "Y" %} المملكة العربية السعودية — جميع الحقوق محفوظة</span>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </body>
 </html>

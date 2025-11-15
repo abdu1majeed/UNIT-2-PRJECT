@@ -1,7 +1,62 @@
-{% extends 'SaudiaArabia/base.html' %}
+{% extends "SaudiaArabia/base.html" %}
 {% load static %}
+{% block title %}الرئيسية{% endblock %}
+{% block content %}
+<section class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-lg-5 text-center">
+      <img src="{% static 'images/ksa3.png' %}" class="img-fluid" alt="شعار المملكة">
+    </div>
 
-{% block title %}
-home
+    <div class="col-lg-7">
+      <h1 class="display-5 fw-bold hero-title mb-3">المملكة العربية السعودية</h1>
+      <p class="lead hero-sub mb-4">
+        أرض التاريخ والهوية والنهضة الحديثة. تكامل الأصالة مع رؤية طموحة لبناء اقتصاد مزدهر
+        ومجتمع حيوي ووطن طموح.
+      </p>
+
+      <div class="d-flex flex-wrap gap-2">
+        <a href="{% url 'SaudiaArabia:vision_page' %}" class="btn btn-primary">رؤية 2030</a>
+        <a href="{% url 'SaudiaArabia:tourism_page' %}" class="btn btn-outline-secondary">السياحة</a>
+        <a href="{% url 'SaudiaArabia:culture_page' %}" class="btn btn-outline-secondary">الثقافة</a>
+        <a href="{% url 'SaudiaArabia:manufacturing_page' %}" class="btn btn-outline-secondary">التصنيع</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">أقسام الموقع</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">التاريخ</h5>
+            <p class="card-text text-muted">مراحل التأسيس ووحدة البلاد منذ الدولة السعودية الأولى حتى العصر الحديث.</p>
+            <a href="{% url 'SaudiaArabia:history_page' %}" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">الثقافة</h5>
+            <p class="card-text text-muted">التراث والفنون واللباس والمطبخ والموسيقى والتنمية الثقافية المعاصرة.</p>
+            <a href="{% url 'SaudiaArabia:culture_page' %}" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">السياحة</h5>
+            <p class="card-text text-muted">وجهات طبيعية وتاريخية وبحرية، ومواسم وفعاليات على مدار العام.</p>
+            <a href="{% url 'SaudiaArabia:tourism_page' %}" class="btn btn-sm btn-outline-primary">اقرأ المزيد</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
-
